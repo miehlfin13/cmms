@@ -1,0 +1,7 @@
+@for (breadcrumb of breadcrumbs; track breadcrumb.displayName) {
+  @if (breadcrumb.isCurrentPage) {
+    <span class="breadcrumb">{{breadcrumb.displayName|translate}}</span>
+  } @else {
+    <a class="breadcrumb" [routerLink]="[breadcrumb.url]">{{breadcrumb.displayName|translate}}</a>
+  }
+}

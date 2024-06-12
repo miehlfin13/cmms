@@ -1,0 +1,58 @@
+{
+  "CONFIRM": {
+    "LOGOUT": "Are you sure you want to logout?"
+  },
+  "ERROR": {
+    "NOPAGEACCESS": "You have no permission to access the page.",
+    "NOTIMPLEMENTED": "Functionality is not yet implemented.",
+    "TOKENEXPIRED": "Token has expired. You will be logged out.",
+    "UNEXPECTEDERROR": "An unexpected error has occured."
+  },
+  "GENERAL": {
+    "ADD": "Add",
+    "CANCEL": "Cancel",
+    "CONFIRM": "Confirm",
+    "CONFIRMPASSWORD": "Confirm New Password",
+    "CURRENTPASSWORD": "Current Password",
+    "DASHBOARD": "Dashboard",
+    "EDIT": "Edit",
+    "ENTERCREDENTIALS": "Please enter your credentials",
+    "HOME": "Home",
+    "LOGIN": "Login",
+    "NEWPASSWORD": "New Password",
+    "NO": "No",
+    "PASSWORD": "Password",
+    "PASSWORDCHANGE": "Password Change",
+    "ROLE": "Role",
+    "ROLES": "Roles",
+    "SAVE": "Save",
+    "USERACCOUNTS": "User Accounts",
+    "USERNAME": "Username",
+    "USER": "User",
+    "USERS": "Users",
+    "VIEW": "View",
+    "YES": "Yes"
+  },
+  "RESPONSE": {
+    "GENERAL": {
+      "INVALIDPASSWORD": "Password is invalid.",
+      "NOTAUTHORIZED": "You are not authorized to do this action."
+    },
+    "INVALIDPAGE": "The page you are trying to access is invalid.",
+    "LOGIN": {
+      "INACTIVE": "User has been deactivated.",
+      "INVALID": "Username or password is invalid.",
+      "LOCKED": "User is locked.",
+      "PENDING": "User is not yet verified."
+    }
+  },
+  "SUCCESS": {
+    "PASSWORDCHANGE": "Password has been updated."
+  },
+  "VALIDATION": {
+    "ENTERPASSWORD": "Please enter your password",
+    "ENTERUSERNAME": "Please enter your username",
+    "NEWPASSWORDNOTMATCH": "New password does not match",
+    "PASSWORDMUSTNOTMATCH": "New password must be different from current password"
+  }
+}

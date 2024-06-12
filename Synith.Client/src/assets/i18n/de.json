@@ -1,0 +1,20 @@
+{
+  "GENERAL": {
+    "ENTERCREDENTIALS": "Bitte geben Sie Ihre Anmeldeinformationen ein",
+    "LOGIN": "Einloggen",
+    "PASSWORD": "Passwort",
+    "USERNAME": "Benutzername"
+  },
+  "RESPONSE": {
+    "LOGIN": {
+      "INACTIVE": "Benutzer wurde deaktiviert.",
+      "INVALID": "Benutzername oder Passwort ist ungültig.",
+      "LOCKED": "Benutzer ist gesperrt.",
+      "PENDING": "Benutzer ist noch nicht verifiziert."
+    }
+  },
+  "VALIDATION": {
+    "ENTERPASSWORD": "Bitte geben Sie Ihr Passwort ein",
+    "ENTERUSERNAME": "Bitte geben Sie Ihren Benutzernamen ein"
+  }
+}

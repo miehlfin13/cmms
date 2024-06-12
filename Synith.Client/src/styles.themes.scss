@@ -1,0 +1,115 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$app-primary: mat.define-palette(mat.$purple-palette);
+$app-accent-light: mat.define-palette(mat.$green-palette, 700, 600, 900);
+$app-accent-dark: mat.define-palette(mat.$green-palette, A200, A100, A400);
+$app-warn: mat.define-palette(mat.$red-palette);
+
+$app-theme-light: mat.define-light-theme(( color: ( primary: $app-primary, accent: $app-accent-light, warn: $app-warn, ) ));
+$app-theme-dark: mat.define-dark-theme(( color: ( primary: $app-primary, accent: $app-accent-dark, warn: $app-warn, ) ));
+
+@include mat.all-component-themes($app-theme-light);
+
+a:link, a:visited {
+  color: white;
+}
+
+.cdk-overlay-dark-backdrop {
+  background: none;
+}
+
+.theme-light {
+  $foreground: map-get($app-theme-light, foreground);
+  $background: map-get($app-theme-light, background);
+  $primary: map-get($app-theme-light, primary);
+
+  app-root {
+    background: mat.get-color-from-palette($background, background);
+  }
+
+  .text-color {
+    color: mat.get-color-from-palette($foreground, text);
+  }
+
+  .hint-text-color {
+    color: mat.get-color-from-palette($foreground, hint-text);
+  }
+
+  .card-raised, mat-dialog-container {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+
+  #theme-switch-button {
+    color: #EEE;
+  }
+
+  .mdc-tooltip__surface {
+    background-color: mat.get-color-from-palette($primary, text) !important;
+  }
+
+  .sidenav-parent {
+    border-bottom: 1px solid mat.get-color-from-palette($foreground, disabled);
+  }
+
+  #sidenav-footer, li {
+    &:hover {
+      background-color: mat.get-color-from-palette($background, focused-button);
+    }
+  }
+
+  mat-sidenav-container {
+    li.sidenav-child[data-selected=true] {
+      background-color: mat.get-color-from-palette($background, focused-button);
+    }
+  }
+}
+
+.theme-dark {
+  @include mat.all-component-colors($app-theme-dark);
+  $foreground: map-get($app-theme-dark, foreground);
+  $background: map-get($app-theme-dark, background);
+  $primary: map-get($app-theme-dark, primary);
+
+  app-root {
+    background: mat.get-color-from-palette($background, background);
+  }
+
+  .text-color {
+    color: mat.get-color-from-palette($foreground, text);
+  }
+
+  .hint-text-color {
+    color: mat.get-color-from-palette($foreground, hint-text);
+  }
+
+  .card-raised, mat-dialog-container {
+    //box-shadow: rgb(0, 0, 1) 0px 20px 30px -10px;
+    box-shadow: rgb(0, 0, 1) 0px 20px 30px -10px;
+  }
+
+  #theme-switch-button {
+    color: #333;
+  }
+
+  .mdc-tooltip__surface {
+    background-color: mat.get-color-from-palette($primary, text) !important;
+  }
+
+  .sidenav-parent {
+    border-bottom: 1px solid mat.get-color-from-palette($foreground, disabled);
+  }
+
+  #sidenav-footer, li {
+    &:hover {
+      background-color: mat.get-color-from-palette($background, focused-button);
+    }
+  }
+
+  mat-sidenav-container {
+    li.sidenav-child[data-selected=true] {
+      background-color: mat.get-color-from-palette($background, focused-button);
+    }
+  }
+}

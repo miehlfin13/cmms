@@ -1,0 +1,68 @@
+@import 'styles.themes.scss';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mdc-text-field--filled {
+  background-color: transparent !important;
+}
+
+mat-error {
+  font-size: 0.7em;
+}
+
+span {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mdc-tooltip__surface {
+  color: #EEE !important;
+}
+
+.mat-mdc-dialog-surface {
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+.dialog-title, [mat-dialog-actions] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dialog-title {
+  padding: 2vh 2vh 0 2vh;
+}
+
+.dialog-message {
+  padding: 1vh;
+}
+
+[mat-dialog-content] {
+  padding: 2vh 4vh 2vh 4vh;
+}
+
+[mat-dialog-actions] {
+  justify-content: end;
+  padding: 0 2vh 2vh 2vh;
+
+  button {
+    margin-left: 1vh;
+    min-width: 10vh;
+    height: 4vh;
+  }
+}
+
+mat-form-field {
+  width: 100%;
+}

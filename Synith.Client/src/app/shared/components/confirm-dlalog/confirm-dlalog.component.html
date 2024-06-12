@@ -1,0 +1,19 @@
+<div class="dialog-title hint-text-color">
+  <mat-icon>help</mat-icon>
+  <span>&nbsp;{{'GENERAL.CONFIRM'|translate}}</span>
+</div>
+<div mat-dialog-content class="text-color">
+  <div class="dialog-message">
+    <span>{{dialog.message}}</span>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button type="button" mat-raised-button color="primary" (click)="dialog.confirm()">
+    <mat-icon>done</mat-icon>
+    <span>{{'GENERAL.YES'|translate}}</span>
+  </button>
+  <button type="button" mat-raised-button color="primary" (click)="dialog.close()" cdkFocusInitial>
+    <mat-icon>close</mat-icon>
+    <span>{{'GENERAL.NO'|translate}}</span>
+  </button>
+</div>

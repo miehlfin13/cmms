@@ -1,0 +1,50 @@
+<form [formGroup]="form" (ngSubmit)="submit()" [hidden]="!isRendered">
+  <mat-grid-list cols="3" rowHeight="70vh">
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile>
+
+      <mat-card class="login-card card-raised">
+
+        <mat-card-header>
+          <mat-card-title>
+            <mat-label class="hint-text-color">{{'GENERAL.ENTERCREDENTIALS'|translate}}</mat-label>
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+
+          <mat-form-field color="accent">
+            <mat-label>
+              <mat-icon>person</mat-icon>
+              &nbsp;{{'GENERAL.USERNAME'|translate}}
+            </mat-label>
+            <input formControlName="username" matInput type="text" required />
+            <mat-error>
+              <span>{{'VALIDATION.ENTERUSERNAME'|translate}}</span>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field color="accent">
+            <mat-label>
+              <mat-icon>key</mat-icon>
+              &nbsp;{{'GENERAL.PASSWORD'|translate}}
+            </mat-label>
+            <input formControlName="password" matInput type="password" required />
+            <mat-error>
+              <span>{{'VALIDATION.ENTERPASSWORD'|translate}}</span>
+            </mat-error>
+          </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+          <button [disabled]="form.invalid" mat-raised-button color="primary">
+            <mat-icon>login</mat-icon>
+            &nbsp;{{'GENERAL.LOGIN'|translate}}
+          </button>
+        </mat-card-actions>
+
+      </mat-card>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

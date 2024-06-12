@@ -1,0 +1,7 @@
+﻿CREATE TABLE [uac].[Modules]
+(
+	[Id]		INT					IDENTITY (1, 1) NOT NULL,
+	[Code]		VARCHAR(50)			NOT NULL,
+    CONSTRAINT [PK_Modules]			PRIMARY KEY CLUSTERED ([Id] ASC),
+	CONSTRAINT [UK_Modules_Code]	UNIQUE NONCLUSTERED ([Code])
+)

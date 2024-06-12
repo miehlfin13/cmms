@@ -1,0 +1,14 @@
+﻿global using FluentValidation;
+global using FluentValidation.Results;
+global using Microsoft.Data.SqlClient;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Logging;
+global using Synith.Core.Base;
+global using Synith.Core.Extensions;
+global using Synith.Core.Interfaces;
+global using Synith.Core.Messages;
+global using Synith.Security.Interfaces;
+global using Synith.UserAccount.Application.Mappers;
+global using Synith.UserAccount.Domain.Entities;
+global using Synith.UserAccount.Domain.Interfaces;
+global using Synith.UserAccount.Infrastructure.Persistence;

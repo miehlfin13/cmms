@@ -1,0 +1,11 @@
+﻿global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Logging;
+global using Synith.Core.Base;
+global using Synith.Core.Extensions;
+global using Synith.Security.Attributes;
+global using Synith.Security.Constants;
+global using Synith.Security.Interfaces;
+global using Synith.UserAccount.Domain.Entities;
+global using Synith.UserAccount.Domain.Interfaces;

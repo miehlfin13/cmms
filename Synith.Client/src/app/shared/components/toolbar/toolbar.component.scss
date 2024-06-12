@@ -1,0 +1,64 @@
+@import "../../../../styles.variables.scss";
+
+mat-toolbar {
+  height: $toolbar-height !important;
+
+  &[data-sidenav-minified=true] {
+    padding-left: 0px;
+
+    .toolbar-title {
+      width: $sidenav-mini-width;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        display: none;
+      }
+
+      mat-icon {
+      }
+    }
+
+    .toolbar-body {
+      width: calc(100vw - $sidenav-mini-width - $toolbar-end-width);
+      padding-left: 2vh;
+      padding-right: 2vh;
+    }
+  }
+
+  &[data-sidenav-minified=false] {
+    .toolbar-title {
+      width: $sidenav-normal-width;
+    }
+
+    .toolbar-body {
+      width: calc(100vw - $sidenav-normal-width - $toolbar-end-width);
+    }
+  }
+}
+
+.toolbar-title, .toolbar-body {
+  transition: all ease-in-out 200ms;
+}
+
+.toolbar-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.toolbar-end {
+  display: flex;
+  width: $toolbar-end-width;
+  justify-content: flex-end !important;
+
+  button {
+    height: 4vh;
+    width: 4vh;
+  }
+
+  #user-language-selector {
+    font-size: 2vh;
+  }
+}

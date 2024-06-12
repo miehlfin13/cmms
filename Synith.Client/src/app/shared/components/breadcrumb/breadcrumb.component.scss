@@ -1,0 +1,13 @@
+.breadcrumb:first-child:before {
+  display: none;
+}
+
+.breadcrumb:before {
+  content: '|';
+  font-size: 0.8em;
+  margin: 0 5px 0 5px;
+}
+
+a:link {
+  text-decoration: none;
+}

@@ -1,0 +1,18 @@
+.login-card {
+  width: 100%;
+  padding: 10px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+
+  mat-card-title {
+    margin-bottom: 20px;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  button {
+    min-width: 30%;
+  }
+}

@@ -1,0 +1,54 @@
+@if (dialog.form != null){
+  <form [formGroup]="dialog.form" (ngSubmit)="dialog.save()">
+    <div class="dialog-title hint-text-color">
+      <mat-icon>key</mat-icon>
+      <span>&nbsp;{{'GENERAL.PASSWORDCHANGE'|translate}}</span>
+    </div>
+    <div mat-dialog-content class="text-color">
+
+      <mat-form-field color="accent">
+        <mat-label>
+          <mat-icon>key</mat-icon>
+          &nbsp;{{'GENERAL.CURRENTPASSWORD'|translate}}
+        </mat-label>
+        <input formControlName="currentPassword" matInput type="password" required />
+        <mat-error>
+          <span>{{'VALIDATION.ENTERPASSWORD'|translate}}</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field color="accent">
+        <mat-label>
+          <mat-icon>key</mat-icon>
+          &nbsp;{{'GENERAL.NEWPASSWORD'|translate}}
+        </mat-label>
+        <input formControlName="newPassword" matInput type="password" required />
+        <mat-error>
+          <span>{{'VALIDATION.ENTERPASSWORD'|translate}}</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field color="accent">
+        <mat-label>
+          <mat-icon>key</mat-icon>
+          &nbsp;{{'GENERAL.CONFIRMPASSWORD'|translate}}
+        </mat-label>
+        <input formControlName="confirmPassword" matInput type="password" required />
+        <mat-error>
+          <span>{{'VALIDATION.ENTERPASSWORD'|translate}}</span>
+        </mat-error>
+      </mat-form-field>
+
+    </div>
+    <div mat-dialog-actions>
+      <button type="submit" mat-raised-button color="primary" [disabled]="dialog.form.invalid">
+        <mat-icon>save</mat-icon>
+        <span>{{'GENERAL.SAVE'|translate}}</span>
+      </button>
+      <button type="button" mat-raised-button color="primary" (click)="dialog.close()" cdkFocusInitial>
+        <mat-icon>close</mat-icon>
+        <span>{{'GENERAL.CANCEL'|translate}}</span>
+      </button>
+    </div>
+  </form>
+}

@@ -1,0 +1,63 @@
+<mat-toolbar color="primary" [attr.data-sidenav-minified]="isSidenavMinified">
+  <div class="toolbar-title">
+    <mat-icon>diversity_2</mat-icon>
+    <span>&nbsp;&nbsp;Synith</span>
+  </div>
+
+  <div class="toolbar-body">
+    @if (token.isLoggedOn()) {
+      <app-breadcrumb></app-breadcrumb>
+    }
+  </div>
+
+  <div class="toolbar-end">
+    <button type="button" id="user-language-selector" mat-mini-fab color="primary"
+            title="Change user language"
+            [matMenuTriggerFor]="userLanguageMenu" (click)="loadLanguages()">
+      <span class="fi fi-{{language}}"></span>
+    </button>
+    &nbsp;
+    <button type="button" id="theme-switch-button" mat-mini-fab color="primary"
+            (click)="switchTheme()" title="{{tooltip}}">
+      <mat-icon>{{icon}}</mat-icon>
+    </button>
+    &nbsp;
+
+    @if (token.isLoggedOn()) {
+      <button type="button" id="user-account-button" mat-mini-fab color="primary"
+              title="User account details" [matMenuTriggerFor]="userAccountMenu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    }
+
+    <mat-menu #userLanguageMenu="matMenu">
+      @for (item of languages; track item.id) {
+        @if (item.code!.toLowerCase() != language) {
+        <button mat-menu-item (click)="changeLanguage(item)">
+          <span class="fi fi-{{item.code!.toLowerCase()}}"></span>&nbsp;
+          <span>{{item.localeName}}</span>
+        </button>
+        }
+      }
+    </mat-menu>
+
+    <mat-menu #userAccountMenu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>account_circle</mat-icon>
+        Hi, admin!
+      </button>
+      <mat-divider></mat-divider>
+
+      <button mat-menu-item (click)="passwordChange.show()">
+        <mat-icon>key</mat-icon>
+        Change password
+      </button>
+      <mat-divider></mat-divider>
+
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        Logout
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

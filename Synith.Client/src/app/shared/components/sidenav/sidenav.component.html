@@ -1,0 +1,35 @@
+<mat-sidenav-container [class]="type">
+  <mat-sidenav mode="side" opened>
+    <div id="sidenav-list">
+      @for (parentSidenav of sidenavList; track parentSidenav.moduleName) {
+        @if (token.hasPermission(parentSidenav.permissionCode)) {
+        <ul [attr.data-selected]="parentSidenav.isExpanded">
+          <li class="sidenav-parent" (click)="toggleModule(parentSidenav.moduleName)"
+              matTooltipPosition="right" matTooltip="{{parentSidenav.label|translate}}" [matTooltipDisabled]="isTooltipDisabled()">
+            <mat-icon>{{parentSidenav.icon}}</mat-icon>
+            <span>{{parentSidenav.label|translate}}</span>
+          </li>
+
+          @for (childSidenav of parentSidenav.children; track childSidenav.moduleName) {
+            @if (token.hasPermission(childSidenav.permissionCode)) {
+            <li class="sidenav-child" (click)="router.navigate([childSidenav.moduleName])"
+                [attr.data-selected]="childSidenav.moduleName == currentModule"
+                matTooltipPosition="right" matTooltip="{{childSidenav.label|translate}}" [matTooltipDisabled]="isTooltipDisabled()">
+              <mat-icon>{{childSidenav.icon}}</mat-icon>
+              <span>{{childSidenav.label|translate}}</span>
+            </li>
+            }
+          }
+        </ul>
+        }
+      }
+    </div>
+    <div id="sidenav-footer" (click)="toggleSidenav()">
+      <mat-icon>{{icon}}</mat-icon>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

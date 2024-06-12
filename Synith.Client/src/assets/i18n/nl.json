@@ -1,0 +1,20 @@
+{
+  "GENERAL": {
+    "ENTERCREDENTIALS": "Voer uw inloggegevens in",
+    "LOGIN": "Inloggen",
+    "PASSWORD": "Wachtwoord",
+    "USERNAME": "Gebruikernaam"
+  },
+  "RESPONSE": {
+    "LOGIN": {
+      "INACTIVE": "Gebruiker is gedeactiveerd.",
+      "INVALID": "Gebruikersnaam of wachtwoord is ongeldig.",
+      "LOCKED": "Gebruiker is vergrendeld.",
+      "PENDING": "Gebruiker is nog niet geverifieerd."
+    }
+  },
+  "VALIDATION": {
+    "ENTERPASSWORD": "Voer uw wachtwoord in",
+    "ENTERUSERNAME": "Voer uw gebruikersnaam in"
+  }
+}

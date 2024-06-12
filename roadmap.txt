@@ -1,0 +1,12 @@
+angular frontend
+  change login to dialog
+  table
+  static form
+  form dialog
+  mutable form
+  useraccount
+    roles
+    users
+acceptance tests using specflow
+pentesting
+...

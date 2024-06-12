@@ -1,0 +1,8 @@
+<app-toolbar></app-toolbar>
+
+@if (token.isLoggedOn()) {
+  <app-sidenav></app-sidenav>
+}
+@else {
+<router-outlet></router-outlet>
+}

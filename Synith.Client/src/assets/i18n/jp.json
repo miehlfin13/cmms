@@ -1,0 +1,20 @@
+{
+  "GENERAL": {
+    "ENTERCREDENTIALS": "ご自身の資格情報を入力してください",
+    "LOGIN": "ログイン",
+    "PASSWORD": "パスワード",
+    "USERNAME": "ユーザー名"
+  },
+  "RESPONSE": {
+    "LOGIN": {
+      "INACTIVE": "ユーザーは無効になっています。",
+      "INVALID": "ユーザー名またはパスワードが無効です。",
+      "LOCKED": "ユーザーはロックされています。",
+      "PENDING": "ユーザーはまだ確認されていません。"
+    }
+  },
+  "VALIDATION": {
+    "ENTERPASSWORD": "パスワードを入力してください",
+    "ENTERUSERNAME": "ユーザー名を入力してください"
+  }
+}
